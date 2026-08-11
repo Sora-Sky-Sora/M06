@@ -3,13 +3,12 @@ title: "Customer Loyalty and Purchase History"
 subtitle: "Proposal Presentation"
 author: "Sora Hosoda"
 institute: "IBM 6540, Cal Poly Pomona"
-date: "Tue Jul 7, 2026"
+date: "Jul 7, 2026"
 format:
   revealjs:
     theme: serif
     width: 1600
     height: 900
-    footer: Customer Loyalty and Purchase History
     transition: slide
     transition-speed: default
     incremental: false
