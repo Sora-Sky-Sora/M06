@@ -26,4 +26,94 @@ execute:
 
 ## In Step 2, you were asked to create a Revealjs presentation. Provide a link to the presentation you published on the web. Add at least one reproducible chart or table in the presentation. Briefly describe what the presentation is about. What did you learn from the experience of the Revealjs presentation?
 
+### Presentation Description
+
+The presentation focuses on customer loyalty and purchase history in digital marketing. It examines whether `PreviousPurchases` and `LoyaltyPoints` are related to customer `Conversion`.
+
+### Presentation URL
+
+<https://sora-sky-sora.github.io/M06/First%20Slide.html>
+
+### Reflection
+
+Making the RevealJS presentation was a good opportunity for me to learn how to organize an analytics project presentation using Quarto. It was also my first time generating a chart directly from R instead of manually adding an image. I learned that slide transitions, incremental lists, speaker notes, and background colors can help organize the presentation and make the slides easier for the audience to follow.
+
+For the final presentation, I want to try more RevealJS features that I did not use this time, such as columns, fragments, custom CSS, citations, and footnotes. I hope these features will help me present the analysis more clearly and create more effective slides for the audience.
+
 ## My advanced wrangling lecture in Step 3 introduced new concepts, including how to join relational databases. Pick three different functions, each from a different category. Describe when to use them and give one coding example along with an output for each function. To clarify, you are expected to do literate programming to weave your narratives with the code.
+
+## `left_join()`
+
+`left_join()` is useful when information from another table needs to be added while keeping all observations from the first table. If a row in the first table does not have a matching key in the second table, the row is still kept and the unmatched value becomes `NA`. The following example uses two tables, `x` and `y`. The `key` variable is used to match the observations.
+
+```{r}
+library(tidyverse)
+
+x <- tribble(
+  ~key, ~val_x,
+     1, "x1",
+     2, "x2",
+     3, "x3"
+)
+y <- tribble(
+  ~key, ~val_y,
+     1, "y1",
+     2, "y2",
+     4, "y3"
+)
+```
+
+The two tables can be joined using `key`.
+
+```{r}
+x
+y
+
+x %>% 
+  left_join(y, by = "key" )
+```
+
+The output keeps all observations from `x`. Keys 1 and 2 have matching observations in `y`, so their `val_y` values are added. Key 3 does not have a match in `y`, so its `val_y` value is `NA`.
+
+## `case_when()`
+
+`case_when()` is useful when values need to be classified using several conditions. It can replace multiple `if_else()` statements and makes the conditions easier to organize. The conditions are evaluated in order, so more specific conditions should be placed first.
+
+The following example classifies numbers based on their values.
+
+```{r}
+x <- 1:50
+
+case_when(               
+  x < 5 ~ "less than 5",   # start with specific cases first
+  x < 10 ~ "less than 10",
+  TRUE ~ as.character(x)
+)
+```
+
+The output classifies values below 5 as `"less than 5"`. Values that do not meet the first condition but are below 10 are classified as `"less than 10"`. The remaining values are returned as character values.
+
+## `rowwise()`
+
+`rowwise()` is useful when a calculation needs to be performed separately for each row. This can be used when several columns from the same observation need to be combined in one calculation.
+
+The following example contains three height measurements for each fruit.
+
+```{r}
+fruits <- tribble(
+  ~"fruit", ~"height_1", ~"height_2", ~"height_3", ~"width", ~"weight",
+  "Banana", 4, 4.2, 3.5, 1, 0.5,
+  "Strawberry", 1, .9, 1.2, 1, .25,
+  "Pineapple", 18, 17.7, 19.2, 6, 3)
+fruits
+```
+
+`rowwise()` allows the mean of the three height variables to be calculated separately for each fruit.
+
+```{r}
+fruits %>% 
+  rowwise(fruit) %>% 
+  mutate(height_mean = mean(c_across(height_1:height_3))) # correct
+```
+
+The output adds `height_mean` to the data. The value is calculated from `height_1`, `height_2`, and `height_3` separately for each fruit.
