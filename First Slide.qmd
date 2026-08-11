@@ -1,0 +1,154 @@
+---
+title: "Customer Loyalty and Purchase History"
+subtitle: "Proposal Presentation"
+author: "Sora Hosoda"
+institute: "IBM 6540, Cal Poly Pomona"
+date: "Tue Jul 7, 2026"
+format:
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: Customer Loyalty and Purchase History
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+  freeze: auto
+---
+
+# Introduction {background-color="#447099"}
+
+## Problem Statement
+
+Digital marketing campaigns are designed to encourage customers to take a desired action.
+
+Customer loyalty and previous purchase behavior may be related to whether a customer converts after a marketing campaign.
+
+Understanding these relationships can help marketers identify customer behaviors that are connected with conversion.
+
+::: notes
+This presentation focuses on the relationship among customer loyalty, previous purchase behavior, and conversion.
+:::
+
+## Analytics Objective
+
+> **To examine whether customer loyalty and previous purchase behavior influence the likelihood of customer conversion.**
+
+**Independent Variables (IVs):**
+
+- `PreviousPurchases`
+- `LoyaltyPoints`
+
+**Dependent Variable (DV):**
+
+- `Conversion`
+
+## Importance
+
+::: incremental
+
+- Understanding customer loyalty and purchase history may help identify customers who are more likely to convert.
+- The findings can help marketers better understand customer behavior and support marketing decisions.
+
+:::
+
+# Methods {background-color="#447099"}
+
+## Data and Sampling
+
+- **Dataset:** Predict Conversion in Digital Marketing Dataset
+- **Rows:** 8,000 customer records
+- **Columns:** 20 variables
+- **Target variable:** `Conversion`
+- **Data type:** Synthetic digital marketing campaign data
+- **Unit of analysis:** Individual customer
+
+## Data Wrangling
+
+::: incremental
+
+- Check missing values in `PreviousPurchases`, `LoyaltyPoints`, and `Conversion`.
+- Convert `Conversion` into a categorical variable.
+- Check duplicate records.
+- Examine distributions and potential outliers.
+
+:::
+
+## Sample Characteristics
+
+The dataset contains 8,000 individual customer records.
+
+For this analytics objective, the analysis focuses on:
+
+- `PreviousPurchases`
+- `LoyaltyPoints`
+- `Conversion`
+
+## Measures
+
+| Construct | Variable | Role |
+|---|---|---|
+| Previous purchase behavior | `PreviousPurchases` | Independent Variable |
+| Customer loyalty | `LoyaltyPoints` | Independent Variable |
+| Customer conversion | `Conversion` | Dependent Variable |
+
+## Reproducible Visualization
+
+```{r}
+#| echo: false
+#| label: fig-loyalty-conversion
+#| fig-cap: "Loyalty Points by Conversion Status"
+
+library(tidyverse)
+
+marketing_data <- read_csv("digital_marketing_campaign_dataset.csv")
+
+marketing_data |>
+  ggplot(aes(x = factor(Conversion), y = LoyaltyPoints)) +
+  geom_boxplot() +
+  labs(
+    x = "Conversion",
+    y = "Loyalty Points",
+    title = "Loyalty Points by Conversion Status"
+  )
+```
+
+::: notes
+The chart is generated directly from the project dataset, so it can be reproduced when the presentation is rendered.
+:::
+
+## Analytics Methods
+
+The analysis will begin with descriptive statistics and visualizations.
+
+**Planned visualizations:**
+
+::: incremental
+
+- Boxplot of `LoyaltyPoints` by conversion status
+- Boxplot of `PreviousPurchases` by conversion status
+- Scatterplot of `PreviousPurchases` and `LoyaltyPoints`
+- Correlation heatmap of key variables
+
+:::
+
+# References {background-color="#447099"}
+
+- [Predict Conversion in Digital Marketing Dataset - Kaggle](https://www.kaggle.com/datasets/rabieelkharoua/predict-conversion-in-digital-marketing-dataset)
+
+- [Quarto RevealJS Presentation Video](https://youtu.be/vjL-BIJenBI?si=vbyD2_vB8m0LiwaE)
