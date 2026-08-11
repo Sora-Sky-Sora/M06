@@ -2265,11 +2265,7 @@ vertical-align: -.125em;
 <h2 data-number="1.1" class="anchored" data-anchor-id="in-step-1-you-learned-how-to-design-stunning-presentation-slides-with-quarto.-whats-your-impression-of-the-revealjs-presentation-describe-its-capabilities-as-you-learned-from-the-presentations.-what-are-its-strengths-and-weaknesses-compared-with-ppt"><span class="header-section-number">1.1</span> In Step 1, you learned how to design stunning presentation slides with Quarto. What’s your impression of the Revealjs presentation? Describe its capabilities as you learned from the presentations. What are its strengths and weaknesses compared with PPT?</h2>
 <blockquote class="blockquote">
 <p>Revealjs is attractive mainly because it is rich in features that allow interactive presentations. One feature that stands out is customization through SCSS. If the theme and colors are defined once, a uniform look can be applied automatically across all the slides. This keeps the entire presentation consistent and reduces the time needed to change colors, fonts, or other design elements. It can save a lot of time when making a large presentation because the same design is easier to maintain across all slides.</p>
-</blockquote>
-<blockquote class="blockquote">
 <p>Another interesting presentation tool is the chalkboard. It allows a speaker to write directly on the slides while presenting. The workshop mentioned that this feature should not be overused, but it can be convenient when additional explanations or notes are needed. Besides this, Revealjs also offers several other presentation tools, such as a navigation menu, speaker view, and slide transitions. These features can make the presentation more engaging for the audience while giving the speaker more control.</p>
-</blockquote>
-<blockquote class="blockquote">
 <p>Compared with PPT, Revealjs may be preferable when a presentation needs reproducible content and consistent formatting across slides. PPT is easier for visual editing because objects can be moved and adjusted directly. Revealjs requires more setup, but once the design is defined, it is easier to maintain the same format across a large presentation.</p>
 </blockquote>
 </section>
@@ -2277,7 +2273,9 @@ vertical-align: -.125em;
 <h2 data-number="1.2" class="anchored" data-anchor-id="in-step-2-you-were-asked-to-create-a-revealjs-presentation.-provide-a-link-to-the-presentation-you-published-on-the-web.-add-at-least-one-reproducible-chart-or-table-in-the-presentation.-briefly-describe-what-the-presentation-is-about.-what-did-you-learn-from-the-experience-of-the-revealjs-presentation"><span class="header-section-number">1.2</span> In Step 2, you were asked to create a Revealjs presentation. Provide a link to the presentation you published on the web. Add at least one reproducible chart or table in the presentation. Briefly describe what the presentation is about. What did you learn from the experience of the Revealjs presentation?</h2>
 <section id="presentation-description" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="presentation-description"><span class="header-section-number">1.2.1</span> Presentation Description</h3>
+<blockquote class="blockquote">
 <p>The presentation focuses on customer loyalty and purchase history in digital marketing. It examines whether <code>PreviousPurchases</code> and <code>LoyaltyPoints</code> are related to customer <code>Conversion</code>.</p>
+</blockquote>
 </section>
 <section id="presentation-url" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="presentation-url"><span class="header-section-number">1.2.2</span> Presentation URL</h3>
@@ -2285,8 +2283,10 @@ vertical-align: -.125em;
 </section>
 <section id="reflection" class="level3" data-number="1.2.3">
 <h3 data-number="1.2.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.2.3</span> Reflection</h3>
+<blockquote class="blockquote">
 <p>Making the RevealJS presentation was a good opportunity for me to learn how to organize an analytics project presentation using Quarto. It was also my first time generating a chart directly from R instead of manually adding an image. I learned that slide transitions, incremental lists, speaker notes, and background colors can help organize the presentation and make the slides easier for the audience to follow.</p>
 <p>For the final presentation, I want to try more RevealJS features that I did not use this time, such as columns, fragments, custom CSS, citations, and footnotes. I hope these features will help me present the analysis more clearly and create more effective slides for the audience.</p>
+</blockquote>
 </section>
 </section>
 <section id="my-advanced-wrangling-lecture-in-step-3-introduced-new-concepts-including-how-to-join-relational-databases.-pick-three-different-functions-each-from-a-different-category.-describe-when-to-use-them-and-give-one-coding-example-along-with-an-output-for-each-function.-to-clarify-you-are-expected-to-do-literate-programming-to-weave-your-narratives-with-the-code." class="level2" data-number="1.3">
@@ -2294,7 +2294,9 @@ vertical-align: -.125em;
 </section>
 <section id="left_join" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="left_join"><span class="header-section-number">1.4</span> <code>left_join()</code></h2>
+<blockquote class="blockquote">
 <p><code>left_join()</code> is useful when information from another table needs to be added while keeping all observations from the first table. If a row in the first table does not have a matching key in the second table, the row is still kept and the unmatched value becomes <code>NA</code>. The following example uses two tables, <code>x</code> and <code>y</code>. The <code>key</code> variable is used to match the observations.</p>
+</blockquote>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -2340,7 +2342,9 @@ vertical-align: -.125em;
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>     <span class="dv">4</span>, <span class="st">&quot;y3&quot;</span></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<blockquote class="blockquote">
 <p>The two tables can be joined using <code>key</code>.</p>
+</blockquote>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2371,12 +2375,15 @@ vertical-align: -.125em;
 3     3 x3    &lt;NA&gt; </code></pre>
 </div>
 </div>
+<blockquote class="blockquote">
 <p>The output keeps all observations from <code>x</code>. Keys 1 and 2 have matching observations in <code>y</code>, so their <code>val_y</code> values are added. Key 3 does not have a match in <code>y</code>, so its <code>val_y</code> value is <code>NA</code>.</p>
+</blockquote>
 </section>
 <section id="case_when" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="case_when"><span class="header-section-number">1.5</span> <code>case_when()</code></h2>
-<p><code>case_when()</code> is useful when values need to be classified using several conditions. It can replace multiple <code>if_else()</code> statements and makes the conditions easier to organize. The conditions are evaluated in order, so more specific conditions should be placed first.</p>
-<p>The following example classifies numbers based on their values.</p>
+<blockquote class="blockquote">
+<p><code>case_when()</code> is useful when values need to be classified using several conditions. It can replace multiple <code>if_else()</code> statements and makes the conditions easier to organize. The conditions are evaluated in order, so more specific conditions should be placed first. The following example classifies numbers based on their values.</p>
+</blockquote>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -2398,12 +2405,15 @@ vertical-align: -.125em;
 [46] &quot;46&quot;           &quot;47&quot;           &quot;48&quot;           &quot;49&quot;           &quot;50&quot;          </code></pre>
 </div>
 </div>
+<blockquote class="blockquote">
 <p>The output classifies values below 5 as <code>&quot;less than 5&quot;</code>. Values that do not meet the first condition but are below 10 are classified as <code>&quot;less than 10&quot;</code>. The remaining values are returned as character values.</p>
+</blockquote>
 </section>
 <section id="rowwise" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="rowwise"><span class="header-section-number">1.6</span> <code>rowwise()</code></h2>
-<p><code>rowwise()</code> is useful when a calculation needs to be performed separately for each row. This can be used when several columns from the same observation need to be combined in one calculation.</p>
-<p>The following example contains three height measurements for each fruit.</p>
+<blockquote class="blockquote">
+<p><code>rowwise()</code> is useful when a calculation needs to be performed separately for each row. This can be used when several columns from the same observation need to be combined in one calculation. The following example contains three height measurements for each fruit.</p>
+</blockquote>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span><span class="st">&quot;fruit&quot;</span>, <span class="sc">~</span><span class="st">&quot;height_1&quot;</span>, <span class="sc">~</span><span class="st">&quot;height_2&quot;</span>, <span class="sc">~</span><span class="st">&quot;height_3&quot;</span>, <span class="sc">~</span><span class="st">&quot;width&quot;</span>, <span class="sc">~</span><span class="st">&quot;weight&quot;</span>,</span>
@@ -2420,7 +2430,9 @@ vertical-align: -.125em;
 3 Pineapple        18     17.7     19.2     6   3   </code></pre>
 </div>
 </div>
+<blockquote class="blockquote">
 <p><code>rowwise()</code> allows the mean of the three height variables to be calculated separately for each fruit.</p>
+</blockquote>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="sc">%&gt;%</span> </span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>(fruit) <span class="sc">%&gt;%</span> </span>
@@ -2435,7 +2447,9 @@ vertical-align: -.125em;
 3 Pineapple        18     17.7     19.2     6   3          18.3 </code></pre>
 </div>
 </div>
+<blockquote class="blockquote">
 <p>The output adds <code>height_mean</code> to the data. The value is calculated from <code>height_1</code>, <code>height_2</code>, and <code>height_3</code> separately for each fruit.</p>
+</blockquote>
 </section>
 </section>
 
